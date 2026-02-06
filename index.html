@@ -1,56 +1,308 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sloan Thomson – Portfolio</title>
+  <meta name="description" content="Portfolio of Sloan Thomson — Grade 12 Communications Technology student at Frontenac Secondary School. Projects, interests, music, and contact." />
 
-<html>	
- <head>
-	 <b><title>Sloan Thomson's Portfolio Website</title></b>
- </head>
-	
- <body>
- <body lang="en">
-	 
-	<h3>____________________________________________________________________</h3>
-	<header>
-    <h1>Sloan Thomson's Portfolio</h1>
-    </header>
-	 
-    <h2>Hello World!</h2>
-	<h3>____________________________________________________________________</h3>
-	<p>Welcome to my portfolio website...</p>
-	<h3>____________________________________________________________________</h3>
-	<h2> Stuff About Me!
-	
-	<h3> Introduction </h3>
-	<p>Hello, my name is Sloan Thomson and I am a grade 12 student at Frontenac Secondary School, this website portfolio is a intro assignment in communications technology semester 2</p>
-	<img src="https://wallpaperaccess.com/full/10905166.jpg"/>
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              orange: '#f97316', // orange-500
+              purple: '#7c3aed', // purple-600
+            }
+          },
+          boxShadow: {
+            glow: '0 10px 30px rgba(124, 58, 237, 0.35), 0 4px 14px rgba(249, 115, 22, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
 
-	<h3>Hopes and Expectations</h3>
-	<p>My hopes for this course is to do the things I did last year in comm tech, but different things this time, in comm tech last year and drama this year, my friends and I made a short movie series stemming from this course and it made me find my love for movie/video making!</p>
-	<img src="https://tse3.mm.bing.net/th/id/OIP.r0S9mUXRQ3S1irUv6CU_gAHaG9?rs=1&pid=ImgDetMain&o=7&rm=3"/>
-		
-	<h3>Interests and Hobbies</h3>
-	<ul>
-		<li>Gaming with friends</li>
-		<li>Playing basketball for fun</li>
-		<li>Movie/video making</li>
-	</ul>
-		
-	<h3>Favourite Songs</h3>
-	<ol>
-		<li>DELERIUM TREMENS - Odetari</li>
-		<li>Damascus - Gorillaz</li>
-		<li>Judas - Lady Gaga</li>
-		<li>SPAGHETTI - LE SSERAFIM</li>
-		<li>Animation Warrior Theme - Nighthawk22</li>
-	</ol>
-	
-	<h3>This is my favourite website, google sheets!</h3>
-	<a href="https://docs.google.com/spreadsheets/u/0/?tgif=c"> Google Sheets</a>
-	<img src="https://media.tenor.com/3nIyhbRvGCMAAAAM/kuca-nokti.gif"/>
+  <!-- Optional: Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2745%27 fill=%27%23f97316%27/%3E%3Ctext x=%2750%27 y=%2758%27 font-size=%2750%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27Arial%27%3ES%3C/text%3E%3C/svg%3E" />
 
-	<h3>This is one of my favourite characters from my favourite game, VALORANT!</h3>
-	<img src="https://tse1.mm.bing.net/th/id/OIP.aO98Ot66KT48ZDu-nZUJrAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"/>
-	<h4><i>VALORANT</i> is a tactical FPS shooter that mixes your standard search and destroy game with hero-like abilities</h4>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-body">
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-40 backdrop-blur border-b border-slate-200/70 dark:border-slate-800/70 bg-white/70 dark:bg-slate-950/50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-orange to-brand-purple shadow-glow"></div>
+          <span class="font-semibold tracking-tight">Sloan Thomson</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-2">
+          <a href="#about" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/70">About</a>
+          <a href="#projects" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/70">Projects</a>
+          <a href="#interests" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/70">Interests</a>
+          <a href="#music" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/70">Music</a>
+          <a href="#contact" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/70">Contact</a>
+        </nav>
 
-		
-	<h3>____________________________________________________________________</h3>
-	</html>
+        <!-- Theme toggle -->
+        <button id="themeToggle" aria-label="Toggle dark mode"
+                class="ml-2 inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800/70">
+          <span id="themeIcon">🌙</span>
+          <span class="hidden sm:inline">Theme</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-purple/10 via-transparent to-transparent dark:from-brand-purple/20"></div>
+    <div class="max-w-6xl mx-auto px-4 pt-12 pb-10">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-800 px-3 py-1 text-xs">
+            <span class="w-2 h-2 rounded-full bg-gradient-to-br from-brand-orange to-brand-purple"></span>
+            Grade 12 • Communications Technology
+          </div>
+          <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold leading-tight">
+            Hi, I’m <span class="bg-gradient-to-r from-brand-orange to-brand-purple bg-clip-text text-transparent">Sloan Thomson</span>
+          </h1>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            Student at <strong>Frontenac Secondary School</strong> creating projects in media, design, and tech. I love
+            <span class="font-medium">gaming</span>, <span class="font-medium">basketball</span>, and <span class="font-medium">movie making</span>.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#projects" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-white bg-gradient-to-r from-brand-orange to-brand-purple shadow-glow">
+              View Projects
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800/70">
+              Contact
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-gradient-to-br from-brand-orange/20 to-brand-purple/20">
+            <!-- Replace this with your photo or a banner image -->
+            <div class="w-full h-full flex items-center justify-center text-center p-8">
+              <div>
+                <div class="text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400">Feature Area</div>
+                <div class="mt-1 text-slate-700 dark:text-slate-200">Add a photo or collage of your projects</div>
+                <div class="mt-3 text-xs text-slate-500">Put an image file in the repo and reference it, e.g., <code class="px-1 py-0.5 rounded bg-slate-100 dark:bg-slate-800">src="images/hero.jpg"</code></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -left-4 hidden sm:block">
+            <div class="px-3 py-1 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs shadow">
+              🎮 Favorite Game: <span class="font-semibold">VALORANT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="https://docs.google.com/spreadsheets/" target="_blank" rel="noopener"
+           class="group rounded-xl border border-slate-200 dark:border-slate-800 p-4 hover:bg-slate-50/80 dark:hover:bg-slate-900/60 transition">
+          <div class="text-sm text-slate-500">Favorite Website</div>
+          <div class="mt-1 font-semibold">Google Sheets</div>
+          <div class="mt-2 text-xs text-slate-500 group-hover:text-slate-700 dark:group-hover:text-slate-300">Data, planning, and tracking made easy.</div>
+        </a>
+        <a href="https://liquipedia.net/" target="_blank" rel="noopener"
+           class="group rounded-xl border border-slate-200 dark:border-slate-800 p-4 hover:bg-slate-50/80 dark:hover:bg-slate-900/60 transition">
+          <div class="text-sm text-slate-500">Favorite Website</div>
+          <div class="mt-1 font-semibold">Liquipedia</div>
+          <div class="mt-2 text-xs text-slate-500 group-hover:text-slate-700 dark:group-hover:text-slate-300">Esports wikis and match info.</div>
+        </a>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
+          <div class="text-sm text-slate-500">Color Combo</div>
+          <div class="mt-2 flex items-center gap-2">
+            <span class="inline-block w-5 h-5 rounded bg-brand-orange"></span>
+            <span class="inline-block w-5 h-5 rounded bg-brand-purple"></span>
+            <span class="text-sm font-medium ml-1">Orange + Purple</span>
+          </div>
+        </div>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
+          <div class="text-sm text-slate-500">Class</div>
+          <div class="mt-1 font-semibold">Communications Technology</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-6">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 lg:p-8 bg-white/60 dark:bg-slate-950/40">
+        <h2 class="text-2xl font-extrabold tracking-tight">About Me</h2>
+        <p class="mt-3 text-slate-700 dark:text-slate-300">
+          I’m a Grade 12 student at <strong>Frontenac Secondary School</strong>. I enjoy building projects that mix
+          creativity and technology—especially anything that involves storytelling, visuals, and interactivity.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="px-3 py-1 rounded-full text-xs bg-slate-100 dark:bg-slate-800/70">🎮 Gaming</span>
+          <span class="px-3 py-1 rounded-full text-xs bg-slate-100 dark:bg-slate-800/70">🏀 Basketball</span>
+          <span class="px-3 py-1 rounded-full text-xs bg-slate-100 dark:bg-slate-800/70">🎬 Movie Making</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-6">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl font-extrabold tracking-tight">School Projects</h2>
+        <a href="#contact" class="text-sm underline decoration-brand-purple/50 decoration-2 underline-offset-4 hover:text-brand-purple">Want feedback? Contact me</a>
+      </div>
+
+      <!-- Project Grid -->
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- PROJECT CARD TEMPLATE (duplicate as needed) -->
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-950/40">
+          <div class="aspect-[16/9] bg-gradient-to-br from-brand-orange/20 to-brand-purple/20 grid place-items-center text-slate-500 dark:text-slate-400">
+            <!-- Replace with <img src="images/project1.jpg" alt="Project 1 screenshot" class="w-full h-full object-cover"> -->
+            <span class="text-sm">Project Image Placeholder</span>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold">Project Title</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Short description of what it does, your role, and what you learned.</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-800/70">Editing</span>
+              <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-800/70">Design</span>
+              <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-800/70">Presentation</span>
+            </div>
+            <div class="mt-3 flex items-center gap-3 text-sm">
+              <a href="#" class="text-brand-purple hover:underline">View</a>
+              <a href="#" class="text-brand-purple/80 hover:underline">Source</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-950/40">
+          <div class="aspect-[16/9] bg-gradient-to-br from-brand-orange/20 to-brand-purple/20 grid place-items-center text-slate-500 dark:text-slate-400">
+            <span class="text-sm">Project Image Placeholder</span>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold">Video Short / PSA</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">A short video project with script, shot list, editing, and sound design.</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-800/70">Premiere / CapCut</span>
+              <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-800/70">Color</span>
+              <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-800/70">Audio</span>
+            </div>
+            <div class="mt-3 flex items-center gap-3 text-sm">
+              <a href="#" class="text-brand-purple hover:underline">Watch</a>
+              <a href="#" class="text-brand-purple/80 hover:underline">Storyboard</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-950/40">
+          <div class="aspect-[16/9] bg-gradient-to-br from-brand-orange/20 to-brand-purple/20 grid place-items-center text-slate-500 dark:text-slate-400">
+            <span class="text-sm">Project Image Placeholder</span>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold">Basketball Graphics Pack</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Scoreboard overlays and social posts template showcasing a game or tournament.</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-800/70">Photoshop</span>
+              <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-800/70">Illustrator</span>
+              <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-800/70">Branding</span>
+            </div>
+            <div class="mt-3 flex items-center gap-3 text-sm">
+              <a href="#" class="text-brand-purple hover:underline">Preview</a>
+              <a href="#" class="text-brand-purple/80 hover:underline">Files</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Callout -->
+      <div class="mt-6 rounded-xl border border-slate-200 dark:border-slate-800 p-4 flex items-center justify-between gap-4">
+        <p class="text-sm text-slate-600 dark:text-slate-300">Want me to add your real projects (links, thumbnails, write-ups)?</p>
+        <a href="#contact" class="text-sm inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-white bg-gradient-to-r from-brand-orange to-brand-purple">Send details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interests -->
+  <section id="interests" class="py-6">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-950/40">
+        <h2 class="text-2xl font-extrabold tracking-tight">Interests & Hobbies</h2>
+        <div class="mt-4 grid sm:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+            <div class="text-3xl">🎮</div>
+            <div class="mt-2 font-semibold">Gaming</div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Competitive and casual. Favorite: VALORANT.</p>
+          </div>
+          <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+            <div class="text-3xl">🏀</div>
+            <div class="mt-2 font-semibold">Basketball</div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Teamwork, highlights, and stat tracking.</p>
+          </div>
+          <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+            <div class="text-3xl">🎬</div>
+            <div class="mt-2 font-semibold">Movie Making</div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Scripting, shooting, and editing stories.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Music -->
+  <section id="music" class="py-6">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-950/40">
+        <h2 class="text-2xl font-extrabold tracking-tight">Favourite Songs</h2>
+        <ol class="mt-4 list-decimal pl-5 space-y-2 text-slate-700 dark:text-slate-300">
+          <li><span class="font-medium">DELERIUM TREMENS</span> — ODETARI</li>
+          <li><span class="font-medium">Damascus</span> — Gorillaz</li>
+          <li><span class="font-medium">Judas</span> — Lady Gaga</li>
+          <li><span class="font-medium">SPAGHETTI</span> — LE SSERAFIM</li>
+          <li><span class="font-medium">Animation Warrior Theme</span> — Nighthawk22</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-6">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 lg:p-8 bg-white/60 dark:bg-slate-950/40">
+        <h2 class="text-2xl font-extrabold tracking-tight">Contact</h2>
+        <p class="mt-2 text-slate-700 dark:text-slate-300 text-sm">Want to collaborate or give feedback? Reach out:</p>
+
+        <!-- Replace with your real email or socials -->
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a href="mailto:your.email@example.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800/70">
+            📧 Email
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800/70">
+            🔗 Link
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-white bg-gradient-to-r from-brand-orange to-brand-purple shadow-glow">
+            ⬇️ Resume (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col sm:flex-row items-center justify-between gap-3">
