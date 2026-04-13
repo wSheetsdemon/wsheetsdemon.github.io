@@ -1,161 +1,203 @@
-﻿<!DOCTYPE html>
+﻿<!-- ============================= -->
+<!-- FILE STRUCTURE (GitHub Repo) -->
+<!-- ============================= -->
+<!--
+/portfolio
+│── index.html
+│── about.html
+│── achievements.html
+│── projects.html
+│── style.css
+│── README.md
+-->
+
+<!-- ============================= -->
+<!-- index.html (Home Page)       -->
+<!-- ============================= -->
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sloan Thomson | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              sloanOrange: '#ff7f11',
-              sloanPurple: '#6a3cc5',
-            },
-          },
-        },
-      };
-    </script>
-  </head>
-  <body class="bg-slate-950 text-slate-100">
-    <div class="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
-      <header class="mx-auto max-w-7xl px-6 py-8 sm:px-8">
-        <div class="flex flex-col gap-6 rounded-3xl border border-slate-700/40 bg-slate-900/70 p-6 shadow-2xl shadow-slate-950/40 backdrop-blur-xl md:flex-row md:items-center md:justify-between">
-          <div>
-            <p class="text-sm uppercase tracking-[0.35em] text-slate-400">Frontenac Secondary School • Grade 12</p>
-            <h1 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">Sloan Thomson</h1>
-            <p class="mt-4 max-w-2xl text-slate-300 sm:text-lg">
-              Communications Technology student building a bright portfolio with a bold orange and purple style. I love gaming, basketball, movie making, Formula 1, and creating designs that feel cinematic.
-            </p>
-          </div>
-          <div class="relative overflow-hidden rounded-3xl border border-slate-700/60 bg-slate-950/60 p-4 shadow-inner shadow-slate-950/30 md:w-96">
-            <img src="image/SloanXHeader" alt="Sloan X Header" class="h-64 w-full object-cover grayscale transition duration-700 hover:grayscale-0" />
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/95 via-slate-950/40 to-transparent p-4">
-              <p class="text-sm uppercase tracking-[0.35em] text-slate-300">Portfolio Snapshot</p>
-            </div>
-          </div>
-        </div>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <title>Sloan Thomson | Portfolio</title>
+  style.css
+</head>
+<body class="home">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+  </nav>
 
-      <main class="mx-auto max-w-7xl px-6 pb-20 sm:px-8">
-        <section class="grid gap-8 lg:grid-cols-2 lg:items-start">
-          <article class="rounded-3xl border border-slate-700/40 bg-slate-900/80 p-8 shadow-xl shadow-slate-950/30">
-            <h2 class="text-3xl font-semibold text-white">My story</h2>
-            <p class="mt-4 text-slate-300">I’m a Grade 12 Communications Technology student at Frontenac Secondary School. My favourite colour combo is orange and purple, and I bring that same energy to gaming, movie making, and design work.</p>
-            <div class="mt-8 grid gap-4 sm:grid-cols-2">
-              <div class="rounded-3xl bg-slate-950/80 p-5 ring-1 ring-slate-700/70">
-                <p class="text-sm uppercase tracking-[0.25em] text-slate-400">Favourite game</p>
-                <p class="mt-3 text-2xl font-semibold text-slate-100">VALORANT</p>
-              </div>
-              <div class="rounded-3xl bg-slate-950/80 p-5 ring-1 ring-slate-700/70">
-                <p class="text-sm uppercase tracking-[0.25em] text-slate-400">Favourite websites</p>
-                <p class="mt-3 text-xl font-semibold text-slate-100">Google Sheets + Liquipedia</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="space-y-6 rounded-3xl border border-slate-700/40 bg-gradient-to-br from-slate-900/95 via-slate-950/80 to-slate-900/95 p-8 shadow-xl shadow-slate-950/30">
-            <div class="flex items-center gap-4 rounded-3xl bg-slate-950/80 p-5 ring-1 ring-slate-700/60">
-              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-sloanOrange to-sloanPurple text-2xl font-bold text-white">🎮</div>
-              <div>
-                <p class="text-sm uppercase tracking-[0.25em] text-slate-400">Interests</p>
-                <p class="mt-2 text-xl font-semibold text-white">Gaming, basketball, movie making, Formula 1</p>
-              </div>
-            </div>
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div class="rounded-3xl border border-slate-700/40 bg-slate-950/80 p-5">
-                <p class="text-sm uppercase tracking-[0.25em] text-slate-400">Gaming</p>
-                <p class="mt-3 text-lg text-slate-100">VALORANT, competitive energy, and fast-paced strategy.</p>
-              </div>
-              <div class="rounded-3xl border border-slate-700/40 bg-slate-950/80 p-5">
-                <p class="text-sm uppercase tracking-[0.25em] text-slate-400">Basketball</p>
-                <p class="mt-3 text-lg text-slate-100">Teamwork, quick moves, and the thrill of every play.</p>
-              </div>
-              <div class="rounded-3xl border border-slate-700/40 bg-slate-950/80 p-5">
-                <p class="text-sm uppercase tracking-[0.25em] text-slate-400">Movie making</p>
-                <p class="mt-3 text-lg text-slate-100">Storytelling through visuals, editing, and cinematic style.</p>
-              </div>
-              <div class="rounded-3xl border border-slate-700/40 bg-slate-950/80 p-5">
-                <p class="text-sm uppercase tracking-[0.25em] text-slate-400">Formula 1</p>
-                <p class="mt-3 text-lg text-slate-100">Speed, precision, and the excitement of every race.</p>
-              </div>
-            </div>
-          </article>
-        </section>
-
-        <section class="mt-12 space-y-8">
-          <div class="rounded-3xl border border-slate-700/40 bg-slate-900/80 p-8 shadow-xl shadow-slate-950/20">
-            <h2 class="text-3xl font-semibold text-white">Favourite songs</h2>
-            <div class="mt-6 grid gap-4 sm:grid-cols-2">
-              <div class="rounded-3xl bg-slate-950/80 p-5">
-                <p class="font-semibold text-slate-100">Close To Me</p>
-                <p class="mt-2 text-slate-400">Ellie Goulding feat. David Guetta and Swae Lee</p>
-              </div>
-              <div class="rounded-3xl bg-slate-950/80 p-5">
-                <p class="font-semibold text-slate-100">DELERIUM TREMENS</p>
-                <p class="mt-2 text-slate-400">Odetari</p>
-              </div>
-              <div class="rounded-3xl bg-slate-950/80 p-5">
-                <p class="font-semibold text-slate-100">Damascus</p>
-                <p class="mt-2 text-slate-400">Gorillaz</p>
-              </div>
-              <div class="rounded-3xl bg-slate-950/80 p-5">
-                <p class="font-semibold text-slate-100">Stateside</p>
-                <p class="mt-2 text-slate-400">Pinkpanthersss and Zara Larsson</p>
-              </div>
-              <div class="rounded-3xl bg-slate-950/80 p-5 sm:col-span-2">
-                <p class="font-semibold text-slate-100">Dracula (Remix)</p>
-                <p class="mt-2 text-slate-400">Tame Impala feat. JENNIE</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-3xl border border-slate-700/40 bg-gradient-to-br from-slate-950/90 via-slate-900/90 to-slate-950/90 p-8 shadow-xl shadow-slate-950/20">
-            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <h2 class="text-3xl font-semibold text-white">Favourite websites</h2>
-                <p class="mt-3 text-slate-300">Tools that match my workflow: productivity and esports knowledge.</p>
-              </div>
-              <div class="inline-flex gap-3">
-                <a href="https://sheets.google.com" target="_blank" class="inline-flex items-center rounded-2xl bg-sloanOrange px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-orange-500">Google Sheets</a>
-                <a href="https://liquipedia.net" target="_blank" class="inline-flex items-center rounded-2xl bg-sloanPurple px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-600">Liquipedia</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="mt-12">
-          <div class="flex items-center justify-between gap-4 rounded-3xl border border-slate-700/40 bg-slate-900/80 p-6 shadow-xl shadow-slate-950/20">
-            <div>
-              <h2 class="text-3xl font-semibold text-white">Gallery</h2>
-              <p class="mt-2 text-slate-400">A showcase of designs and visuals from my portfolio folder.</p>
-            </div>
-            <div class="rounded-3xl bg-slate-950/80 px-4 py-3 text-sm uppercase tracking-[0.25em] text-slate-400">Orange + Purple</div>
-          </div>
-
-          <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="overflow-hidden rounded-3xl border border-slate-700/30 bg-slate-950/80 shadow-lg shadow-slate-950/20">
-              <img src="image/FNFnegativespacecover" alt="FNF negative space cover" class="h-72 w-full object-cover transition duration-500 hover:scale-105" />
-            </div>
-            <div class="overflow-hidden rounded-3xl border border-slate-700/30 bg-slate-950/80 shadow-lg shadow-slate-950/20">
-              <img src="image/GDinMarioCoverRevamp2" alt="GD in Mario cover revamp" class="h-72 w-full object-cover transition duration-500 hover:scale-105" />
-            </div>
-            <div class="overflow-hidden rounded-3xl border border-slate-700/30 bg-slate-950/80 shadow-lg shadow-slate-950/20">
-              <img src="image/gobhut1" alt="Gob Hut design" class="h-72 w-full object-cover transition duration-500 hover:scale-105" />
-            </div>
-            <div class="overflow-hidden rounded-3xl border border-slate-700/30 bg-slate-950/80 shadow-lg shadow-slate-950/20">
-              <img src="image/SloanXHeader" alt="Sloan X header" class="h-72 w-full object-cover transition duration-500 hover:scale-105" />
-            </div>
-            <div class="overflow-hidden rounded-3xl border border-slate-700/30 bg-slate-950/80 shadow-lg shadow-slate-950/20">
-              <img src="image/TeamPurifyV2" alt="Team Purify design" class="h-72 w-full object-cover transition duration-500 hover:scale-105" />
-            </div>
-            <div class="overflow-hidden rounded-3xl border border-slate-700/30 bg-slate-950/80 shadow-lg shadow-slate-950/20">
-              <img src="image/thumbnailregular1" alt="Thumbnail design" class="h-72 w-full object-cover transition duration-500 hover:scale-105" />
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-  </body>
+  <main class="content">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hi! I’m <strong>Sloan Thomson</strong>, a Grade 12 student who loves creativity, games, and storytelling.</p>
+    <p>Explore my site to learn more about me, my achievements, and the projects I’m working on.</p>
+  </main>
+</body>
 </html>
+
+<!-- ============================= -->
+<!-- about.html (About Me Page)   -->
+<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Me | Sloan Thomson</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="about">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <main class="content">
+    <h1>About Me</h1>
+    <ul>
+      <li><strong>Name:</strong> Sloan Thomson</li>
+      <li><strong>School:</strong> Frontenac Secondary School</li>
+      <li><strong>Grade:</strong> 12</li>
+      <li><strong>Favorite Color:</strong> Red</li>
+      <li><strong>Favorite Song:</strong> Dracula – Tame Impala (JENNIE Remix)</li>
+      <li><strong>Hobbies:</strong> Gaming, movie-making, writing</li>
+      <li><strong>Favorite Game:</strong> The Binding of Isaac (for replay value and item unlocks)</li>
+    </ul>
+  </main>
+</body>
+</html>
+
+<!-- ============================= -->
+<!-- achievements.html            -->
+<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Achievements | Sloan Thomson</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="achievements">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <main class="content">
+    <h1>Achievements</h1>
+    <p>This page will be updated with my academic and personal achievements.</p>
+  </main>
+</body>
+</html>
+
+<!-- ============================= -->
+<!-- projects.html                -->
+<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | Sloan Thomson</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="projects">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <main class="content">
+    <h1>Projects</h1>
+    <p>This page will showcase my creative and technical projects.</p>
+  </main>
+</body>
+</html>
+
+<!-- ============================= -->
+<!-- style.css (Themes)           -->
+<!-- ============================= -->
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content {
+  padding: 60px;
+  color: white;
+}
+
+/* HOME – Red & Purple Swirls */
+.home {
+  background: radial-gradient(circle at top left, red, purple);
+  min-height: 100vh;
+}
+
+/* ABOUT – Yellow & Royal Blue Zigzags */
+.about {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      royalblue,
+      royalblue 20px,
+      yellow 20px,
+      yellow 40px
+    );
+  min-height: 100vh;
+}
+
+/* ACHIEVEMENTS – Purple & Orange Melt */
+.achievements {
+  background: linear-gradient(135deg, purple, orange);
+  min-height: 100vh;
+}
+
+/* PROJECTS – Black & White Pattern */
+.projects {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      black,
+      black 25px,
+      white 25px,
+      white 50px
+    );
+  min-height: 100vh;
+}
+
+/* README.md */
+/*
+# Sloan Thomson Portfolio
+
+This is a multi-page portfolio website built with HTML and CSS.
+
+## Pages
+- Home
+- About Me
+- Achievements
+- Projects
+
+## How to Use
+1. Upload this folder to GitHub
+2. Enable GitHub Pages in repo settings
+3. Set source to main branch
+*/
