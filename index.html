@@ -1,203 +1,31 @@
-﻿<!-- ============================= -->
-<!-- FILE STRUCTURE (GitHub Repo) -->
-<!-- ============================= -->
-<!--
-/portfolio
-│── index.html
-│── about.html
-│── achievements.html
-│── projects.html
-│── style.css
-│── README.md
--->
-
-<!-- ============================= -->
-<!-- index.html (Home Page)       -->
-<!-- ============================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sloan Thomson | Portfolio</title>
-  style.css
+  <link rel="stylesheet" href="style.css" />
+  <script src="background.js" defer></script>
 </head>
 <body class="home">
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
-    <a href="achievements.html">Achievements</a>
     <a href="projects.html">Projects</a>
+    <a href="extras.html">Extras</a>
   </nav>
 
-  <main class="content">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hi! I’m <strong>Sloan Thomson</strong>, a Grade 12 student who loves creativity, games, and storytelling.</p>
-    <p>Explore my site to learn more about me, my achievements, and the projects I’m working on.</p>
+  <main class="content home-hero">
+    <div class="hero">
+      <p class="eyebrow">PLAYSTATION 2 STYLE</p>
+      <h1>Welcome to my portfolio website!</h1>
+      <p class="subtitle">Sloan Thomson - Grade 12 Communications Technology</p>
+      <div class="hero-box">
+        <p>Explore my creative world with retro console visuals, strong navigation, and content built for my portfolio.</p>
+      </div>
+    </div>
   </main>
+
+  <footer>Use the menu above to jump to any page at any time.</footer>
 </body>
 </html>
-
-<!-- ============================= -->
-<!-- about.html (About Me Page)   -->
-<!-- ============================= -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>About Me | Sloan Thomson</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="about">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="achievements.html">Achievements</a>
-    <a href="projects.html">Projects</a>
-  </nav>
-
-  <main class="content">
-    <h1>About Me</h1>
-    <ul>
-      <li><strong>Name:</strong> Sloan Thomson</li>
-      <li><strong>School:</strong> Frontenac Secondary School</li>
-      <li><strong>Grade:</strong> 12</li>
-      <li><strong>Favorite Color:</strong> Red</li>
-      <li><strong>Favorite Song:</strong> Dracula – Tame Impala (JENNIE Remix)</li>
-      <li><strong>Hobbies:</strong> Gaming, movie-making, writing</li>
-      <li><strong>Favorite Game:</strong> The Binding of Isaac (for replay value and item unlocks)</li>
-    </ul>
-  </main>
-</body>
-</html>
-
-<!-- ============================= -->
-<!-- achievements.html            -->
-<!-- ============================= -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Achievements | Sloan Thomson</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="achievements">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="achievements.html">Achievements</a>
-    <a href="projects.html">Projects</a>
-  </nav>
-
-  <main class="content">
-    <h1>Achievements</h1>
-    <p>This page will be updated with my academic and personal achievements.</p>
-  </main>
-</body>
-</html>
-
-<!-- ============================= -->
-<!-- projects.html                -->
-<!-- ============================= -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Projects | Sloan Thomson</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="projects">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="achievements.html">Achievements</a>
-    <a href="projects.html">Projects</a>
-  </nav>
-
-  <main class="content">
-    <h1>Projects</h1>
-    <p>This page will showcase my creative and technical projects.</p>
-  </main>
-</body>
-</html>
-
-<!-- ============================= -->
-<!-- style.css (Themes)           -->
-<!-- ============================= -->
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-nav {
-  display: flex;
-  gap: 20px;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.content {
-  padding: 60px;
-  color: white;
-}
-
-/* HOME – Red & Purple Swirls */
-.home {
-  background: radial-gradient(circle at top left, red, purple);
-  min-height: 100vh;
-}
-
-/* ABOUT – Yellow & Royal Blue Zigzags */
-.about {
-  background:
-    repeating-linear-gradient(
-      45deg,
-      royalblue,
-      royalblue 20px,
-      yellow 20px,
-      yellow 40px
-    );
-  min-height: 100vh;
-}
-
-/* ACHIEVEMENTS – Purple & Orange Melt */
-.achievements {
-  background: linear-gradient(135deg, purple, orange);
-  min-height: 100vh;
-}
-
-/* PROJECTS – Black & White Pattern */
-.projects {
-  background:
-    repeating-linear-gradient(
-      90deg,
-      black,
-      black 25px,
-      white 25px,
-      white 50px
-    );
-  min-height: 100vh;
-}
-
-/* README.md */
-/*
-# Sloan Thomson Portfolio
-
-This is a multi-page portfolio website built with HTML and CSS.
-
-## Pages
-- Home
-- About Me
-- Achievements
-- Projects
-
-## How to Use
-1. Upload this folder to GitHub
-2. Enable GitHub Pages in repo settings
-3. Set source to main branch
-*/
